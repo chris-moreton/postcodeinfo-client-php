@@ -40,6 +40,12 @@ class Client
     public function lookupPostcode($postcode)
     {
         $path = $this->apiEndpoint . '/addresses/?postcode=' . $postcode;
+        
+        $postcode = new Postcode();
+        
+        $postcode->setLatitude('123');
+        
+        return $postcode;
     }
     
     public function client()
