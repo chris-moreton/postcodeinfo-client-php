@@ -1,5 +1,5 @@
 <?php
-namespace ministryofjustice\postcodeInfo\client;
+namespace ministryofjustice\postcodeinfo\client;
 
 class Postcode
 {
@@ -109,5 +109,12 @@ class Postcode
     {
         $this->addresses = $addresses;
     }
- 
+    
+    /**
+     * @param $address
+     */
+    public function addAddress($address)
+    {
+        $this->addresses[] = $address;
+    }
 }

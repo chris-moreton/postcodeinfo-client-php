@@ -14,4 +14,10 @@ Then, run
 
 	composer install
 	
+# Tests
+
+To run the tests, add a file called spec/api_key. Inside this file place the API token for the postcode info service. Then, from the root of the repository:
+
+	bin/phpspec run --format=pretty -vvv --stop-on-failure
+	
 	

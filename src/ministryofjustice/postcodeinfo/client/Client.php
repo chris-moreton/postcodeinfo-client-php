@@ -1,7 +1,6 @@
 <?php
 namespace ministryofjustice\postcodeinfo\client;
 
-use ministryofjustice\postcodeInfo\client\Postcode;
 use GuzzleHttp\Client as GuzzleClient;
 
 class Client
@@ -40,10 +39,23 @@ class Client
     public function lookupPostcode($postcode)
     {
         $path = $this->apiEndpoint . '/addresses/?postcode=' . $postcode;
+
+        $response = $this->client()->get( $path, [
+            'headers' => [
+                'Content-Type' => 'application/json',
+                'Authorization' => 'Token ' . $this->getApiKey(),
+            ]
+        ]);
+        
+        $data = json_decode($response->getBody(), true);
         
         $postcode = new Postcode();
         
-        $postcode->setLatitude('123');
+        foreach ($data as $addressData) {
+            $address = new Address();
+            $address->exchangeArray($addressData);
+            $postcode->addAddress($address);
+        }
         
         return $postcode;
     }
@@ -53,6 +65,8 @@ class Client
         if ( !isset($this->guzzleClient) ) {
             $this->guzzleClient = new GuzzleClient();
         }
+        
+        return $this->guzzleClient;
     }
     
     /**

@@ -1,5 +1,5 @@
 <?php
-namespace ministryofjustice\postcodeInfo\client;
+namespace ministryofjustice\postcodeinfo\client;
 
 class Point
 {
