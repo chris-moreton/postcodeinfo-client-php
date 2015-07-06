@@ -4,16 +4,10 @@ PHP API Client wrapper for [MoJ Postcode Info API](https://github.com/ministryof
 
 # Installation
 
-Update you composer.json file to include the items below:
+Update your composer.json file to include:
 
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/ministryofjustice/postcodeinfo-client-php"
-        },
-    ],
     "require": {
-        "ministryofjustice/postcodeinfo-client-php": "1.0.0",
+        "ministryofjustice/postcodeinfo-client-php": "1.0.1",
     },
     
 Then, run
