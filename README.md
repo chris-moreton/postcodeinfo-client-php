@@ -12,7 +12,7 @@ Update your composer.json file to include:
     
 Then, run
 
-	composer install
+	php composer.phar install
 	
 # Usage
 
