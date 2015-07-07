@@ -34,7 +34,7 @@ Then, run
 	
 	$centrePoint = $postcode->getCentrePoint();
 	$centrePoint->getLatitude();
-	centrePoint->getLongitude();
+	$centrePoint->getLongitude();
 	
 	$localAuth = $postcode->getLocalAuthority();
 	$localAuth->getName();
