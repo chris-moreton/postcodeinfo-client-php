@@ -165,21 +165,5 @@ class Client
     {
         $this->apiEndpoint = $apiEndpoint;
     }
-
-    /**
-     * @return the $guzzleClient
-     */
-    public function getGuzzleClient()
-    {
-        return $this->guzzleClient;
-    }
-
-    /**
-     * @param GuzzleClient $guzzleClient
-     */
-    public function setGuzzleClient($guzzleClient)
-    {
-        $this->guzzleClient = $guzzleClient;
-    }
-
+    
 }
