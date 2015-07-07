@@ -35,13 +35,10 @@ Quick Start
 -----------
 
 	use MinistryOfJustice\PostcodeInfo\Client\Client;
-	
-	$apiKey = 'API_KEY_HERE';
-	$endpoint = 'https://postcodeinfo-staging.dsd.io/';
-	
+
 	$client = new Client(
-		$apiKey,
-		$endpoint
+		'API_KEY_HERE',
+		'https://postcodeinfo-staging.dsd.io'
 	);
 	
 	$postcode = $client->lookupPostcode('AB124YA');
