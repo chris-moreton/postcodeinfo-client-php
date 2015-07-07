@@ -24,13 +24,13 @@ class ClientSpec extends ObjectBehavior
     function it_will_know_if_the_postcode_is_valid()
     {
         $this->beConstructedWith(file_get_contents('spec/api_key'), 'https://postcodeinfo-staging.dsd.io/');
-        $this->lookupPostcode('SW195AL')->getIsValid()->shouldBe(true);
+        $this->lookupPostcode('SW195AL')->isValid()->shouldBe(true);
     }
     
     function it_will_know_if_the_postcode_is_not_valid()
     {
         $this->beConstructedWith(file_get_contents('spec/api_key'), 'https://postcodeinfo-staging.dsd.io/');
-        $this->lookupPostcode('MADEUP')->getIsValid()->shouldBe(false);
+        $this->lookupPostcode('MADEUP')->isValid()->shouldBe(false);
     }
     
     function it_will_get_the_postcode_centrepoint_type()

@@ -1,7 +1,6 @@
 <?php
 namespace ministryofjustice\postcodeinfo\client;
 
-use Prophecy\Argument\Token\StringContainsToken;
 class Address
 {
     /**
@@ -126,6 +125,14 @@ class Address
     {
         $this->departmentName = $departmentName;
     }
+    
+    /**
+     * @param string $poBoxNumber
+     */
+    public function setPoBoxNumber($poBoxNumber)
+    {
+        $this->poBoxNumber = $poBoxNumber;
+    }
 
     /**
      * @return the $poBoxNumber
@@ -133,14 +140,6 @@ class Address
     public function getPoBoxNumber()
     {
         return $this->poBoxNumber;
-    }
-
-    /**
-     * @param string $poBoxNumber
-     */
-    public function setPoBoxNumber($poBoxNumber)
-    {
-        $this->poBoxNumber = $poBoxNumber;
     }
 
     /**

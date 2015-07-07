@@ -28,7 +28,7 @@ class Postcode
     /**
      * @return $isValid
      */
-    public function getIsValid()
+    public function isValid()
     {
         return $this->isValid;
     }

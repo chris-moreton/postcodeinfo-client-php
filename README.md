@@ -22,6 +22,8 @@ Then, run
 	
 	$postcode = $client->lookupPostcode('AB124YA');
 	
+	$isValid = $postcode->isValid();
+	
 	$centrePoint = $postcode->getCentrePoint();
 	$lat = $centrePoint->getLatitude();
 	$long = $centrePoint->getLongitude();
