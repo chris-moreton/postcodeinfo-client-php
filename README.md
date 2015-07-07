@@ -17,7 +17,7 @@ Then, run
 # Usage
 
 Authentication
-~~~~~~~~~~~~~~
+--------------
 
 You will need an *authentication token* (auth token). If you're using MOJ DS's
 Postcode Info server, you can get a token by emailing
@@ -32,7 +32,7 @@ https://github.com/ministryofjustice/postcodeinfo#auth_tokens for instructions
 on how to create a token.
 
 Quick Start
-~~~~~~~~~~~
+-----------
 
 	use ministryofjustice\postcodeinfo\client\Client;
 	
@@ -60,23 +60,23 @@ Quick Start
 	
 	foreach ($addresses as $address) {
 		$address->getUprn();
-        $address->getThoroughfareName();
-        $address->getOrganisationName();
-        $address->getDepartmentName();
-        $address->getPoBoxNumber();
-        $address->getBuildingName();
-        $address->getSubBuildingName();
-        $address->getBuildingNumber();
-        $address->getDependentLocality();
-        $address->getDoubleDependentLocality();
-        $address->getPostTown();
-        $address->getPostcode();
-        $address->getPostcodeType();
-        $address->getFormattedAddress();
-        
-        $point = $address->getPoint();
-        $point->getLatitude();
-        $point->getLongitude();
+	        $address->getThoroughfareName();
+	        $address->getOrganisationName();
+	        $address->getDepartmentName();
+	        $address->getPoBoxNumber();
+	        $address->getBuildingName();
+	        $address->getSubBuildingName();
+	        $address->getBuildingNumber();
+	        $address->getDependentLocality();
+	        $address->getDoubleDependentLocality();
+	        $address->getPostTown();
+	        $address->getPostcode();
+	        $address->getPostcodeType();
+	        $address->getFormattedAddress();
+	        
+	        $point = $address->getPoint();
+	        $point->getLatitude();
+	        $point->getLongitude();
  	}
 
 Please see the tests in spec/ministryofjustice/postcodeinfo/client/ClientSpec.php to see all the interface methods and their usage.
