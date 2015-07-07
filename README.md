@@ -34,7 +34,7 @@ on how to create a token.
 Quick Start
 -----------
 
-	use ministryofjustice\postcodeinfo\client\Client;
+	use MinistryOfJustice\PostcodeInfo\Client\Client;
 	
 	$apiKey = 'API_KEY_HERE';
 	$endpoint = 'https://postcodeinfo-staging.dsd.io/';
