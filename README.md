@@ -59,7 +59,7 @@ Quick Start
 	$addresses = $postcode->getAddresses();
 	
 	foreach ($addresses as $address) {
-		$address->getUprn();
+	        $address->getUprn();
 	        $address->getThoroughfareName();
 	        $address->getOrganisationName();
 	        $address->getDepartmentName();
