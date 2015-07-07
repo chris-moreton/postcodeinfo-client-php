@@ -16,6 +16,46 @@ Then, run
 	
 # Usage
 
+	use ministryofjustice\postcodeinfo\client\Client;
+	
+	$client = new Client();
+	
+	$postcode = $client->lookupPostcode('AB124YA');
+	
+	$centrePoint = $postcode->getCentrePoint();
+	$lat = $centrePoint->getLatitude();
+	$long = $centrePoint->getLongitude();
+	
+	$localAuth = $postcode->getLocalAuthority();
+	$name = $localAuth->getName();
+	$gssCode = $localAuth->getGssCode();
+	
+	$addresses = $postcode->getAddresses();
+	
+	foreach ($addresses as $address) {
+	
+		// methods available are:
+		
+		$address->getUprn();
+        $address->getThoroughfareName();
+        $address->getOrganisationName();
+        $address->getDepartmentName();
+        $address->getPoBoxNumber();
+        $address->getBuildingName();
+        $address->getSubBuildingName();
+        $address->getBuildingNumber();
+        $address->getDependentLocality();
+        $address->getDoubleDependentLocality();
+        $address->getPostTown();
+        $address->getPostcode();
+        $address->getPostcodeType();
+        $address->getFormattedAddress();
+        
+        $point = $address->getPoint();
+        $point->getLatitude();
+        $point->getLongitude();
+ 	}
+
 Please see the tests in spec/ministryofjustice/postcodeinfo/client/ClientSpec.php to see all the interface methods and their usage.
 
 For example,
