@@ -16,7 +16,7 @@ Then, run
 	
 # Usage
 
-	You will need your API key for the PostcodeInfo service.
+You will need your API key for the PostcodeInfo service.
 
 	use ministryofjustice\postcodeinfo\client\Client;
 	
