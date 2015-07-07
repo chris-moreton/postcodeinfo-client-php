@@ -14,6 +14,6 @@
         "bin-dir": "bin"
     },
     "autoload": {
-        "psr-4": {"ministryofjustice\\postcodeinfo\\client\\": "src/ministryofjustice/postcodeinfo/client/"}
+        "psr-4": {"MinistryOfJustice\\PostcodeInfo\\Client\\": "src/MinistryOfJustice/PostcodeInfo/Client/"}
     }
 }

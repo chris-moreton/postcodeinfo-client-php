@@ -1,5 +1,5 @@
 <?php
-namespace ministryofjustice\postcodeinfo\client;
+namespace MinistryOfJustice\PostcodeInfo\Client;
 
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\ClientException;

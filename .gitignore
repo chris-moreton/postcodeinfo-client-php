@@ -3,3 +3,4 @@
 .project
 vendor/
 spec/api_key
+.idea

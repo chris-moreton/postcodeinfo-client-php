@@ -1,10 +1,10 @@
 <?php
-namespace spec\ministryofjustice\postcodeinfo\client;
+namespace spec\MinistryOfJustice\PostcodeInfo\Client;
 
 include "spec/SpecHelper.php";
 
 use PhpSpec\ObjectBehavior;
-use ministryofjustice\postcodeinfo\client\Postcode;
+use MinistryOfJustice\PostcodeInfo\Client\Postcode;
 
 class ClientSpec extends ObjectBehavior
 {
@@ -12,7 +12,7 @@ class ClientSpec extends ObjectBehavior
     function it_is_initializable()
     {
         $this->beConstructedWith(file_get_contents('spec/api_key'), 'https://postcodeinfo-staging.dsd.io/');
-        $this->shouldHaveType('ministryofjustice\postcodeinfo\client\Client');
+        $this->shouldHaveType('MinistryOfJustice\PostcodeInfo\Client\Client');
     }
 
     function it_will_get_a_postcode_object_from_a_lookup()

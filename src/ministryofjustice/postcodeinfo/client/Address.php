@@ -1,5 +1,5 @@
 <?php
-namespace ministryofjustice\postcodeinfo\client;
+namespace MinistryOfJustice\PostcodeInfo\Client;
 
 class Address
 {
