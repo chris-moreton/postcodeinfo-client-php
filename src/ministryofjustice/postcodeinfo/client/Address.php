@@ -326,7 +326,7 @@ class Address
         $this->setOrganisationName($array['organisation_name']);
         $this->setDepartmentName($array['department_name']);
         $this->setPoBoxNumber($array['po_box_number']);
-        $this->setBuildingName($array)['building_name'];
+        $this->setBuildingName($array['building_name']);
         $this->setSubBuildingName($array['sub_building_name']);
         $this->setBuildingNumber($array['building_number']);
         $this->setDependentLocality($array['dependent_locality']);
