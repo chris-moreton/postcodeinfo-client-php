@@ -16,7 +16,23 @@ Then, run
 	
 # Usage
 
-You will need your API key for the PostcodeInfo service.
+Authentication
+~~~~~~~~~~~~~~
+
+You will need an *authentication token* (auth token). If you're using MOJ DS's
+Postcode Info server, you can get a token by emailing
+platforms@digital.justice.gov.uk with a brief summary of:
+
+* who you are
+* what project you're going to be using it on
+* roughly how many lookups you expect to do per day
+
+If you're running your own server, see
+https://github.com/ministryofjustice/postcodeinfo#auth_tokens for instructions
+on how to create a token.
+
+Quick Start
+~~~~~~~~~~~
 
 	use ministryofjustice\postcodeinfo\client\Client;
 	
