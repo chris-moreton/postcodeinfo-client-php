@@ -16,28 +16,33 @@ Then, run
 	
 # Usage
 
+	You will need your API key for the PostcodeInfo service.
+
 	use ministryofjustice\postcodeinfo\client\Client;
 	
-	$client = new Client();
+	$apiKey = 'API_KEY_HERE';
+	$endpoint = 'https://postcodeinfo-staging.dsd.io/';
+	
+	$client = new Client(
+		$apiKey,
+		$endpoint
+	);
 	
 	$postcode = $client->lookupPostcode('AB124YA');
 	
 	$isValid = $postcode->isValid();
 	
 	$centrePoint = $postcode->getCentrePoint();
-	$lat = $centrePoint->getLatitude();
-	$long = $centrePoint->getLongitude();
+	$centrePoint->getLatitude();
+	centrePoint->getLongitude();
 	
 	$localAuth = $postcode->getLocalAuthority();
-	$name = $localAuth->getName();
-	$gssCode = $localAuth->getGssCode();
+	$localAuth->getName();
+	$localAuth->getGssCode();
 	
 	$addresses = $postcode->getAddresses();
 	
 	foreach ($addresses as $address) {
-	
-		// methods available are:
-		
 		$address->getUprn();
         $address->getThoroughfareName();
         $address->getOrganisationName();
