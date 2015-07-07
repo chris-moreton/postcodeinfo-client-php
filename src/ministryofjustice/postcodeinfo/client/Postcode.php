@@ -9,17 +9,12 @@ class Postcode
     private $isValid;
     
     /**
-     * @var number
+     * @var Point
      */
-    private $latitude;
+    private $centrePoint;
     
     /**
-     * @var number
-     */
-    private $longitude;
-    
-    /**
-     * @var string
+     * @var LocalAuthority
      */
     private $localAuthority;
     
@@ -47,39 +42,7 @@ class Postcode
     }
 
     /**
-     * @return the $latitude
-     */
-    public function getLatitude()
-    {
-        return $this->latitude;
-    }
-
-    /**
-     * @param number $latitude
-     */
-    public function setLatitude($latitude)
-    {
-        $this->latitude = $latitude;
-    }
-
-    /**
-     * @return the $longitude
-     */
-    public function getLongitude()
-    {
-        return $this->longitude;
-    }
-
-    /**
-     * @param number $longitude
-     */
-    public function setLongitude($longitude)
-    {
-        $this->longitude = $longitude;
-    }
-
-    /**
-     * @return the $localAuthority
+     * @return LocalAuthority $localAuthority
      */
     public function getLocalAuthority()
     {
@@ -87,13 +50,29 @@ class Postcode
     }
 
     /**
-     * @param string $localAuthority
+     * @param LocalAuthority $localAuthority
      */
-    public function setLocalAuthority($localAuthority)
+    public function setLocalAuthority(LocalAuthority $localAuthority)
     {
         $this->localAuthority = $localAuthority;
     }
 
+    /**
+     * @return the $centrePoint
+     */
+    public function getCentrePoint()
+    {
+        return $this->centrePoint;
+    }
+    
+    /**
+     * @param Point $centrePoint
+     */
+    public function setCentrePoint($centrePoint)
+    {
+        $this->centrePoint = $centrePoint;
+    }
+    
     /**
      * @return the $addresses
      */
@@ -117,4 +96,5 @@ class Postcode
     {
         $this->addresses[] = $address;
     }
+
 }
