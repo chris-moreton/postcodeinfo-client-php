@@ -337,8 +337,8 @@ class Address
         
         $point = new Point();
         $point->setType($array['point']['type']);
-        $point->setLatitude($array['point']['coordinates'][0]);
-        $point->setLongitude($array['point']['coordinates'][1]);
+        $point->setLongitude($array['point']['coordinates'][0]);
+        $point->setLatitude($array['point']['coordinates'][1]);
         
         $this->setPoint($point);
     }

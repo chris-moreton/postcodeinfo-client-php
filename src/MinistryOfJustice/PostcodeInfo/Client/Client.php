@@ -102,8 +102,8 @@ class Client
                 $centrePoint = new Point();
             
                 $centrePoint->setType($responseArray['centre']['type']);
-                $centrePoint->setLatitude($responseArray['centre']['coordinates'][0]);
-                $centrePoint->setLongitude($responseArray['centre']['coordinates'][1]);
+                $centrePoint->setLongitude($responseArray['centre']['coordinates'][0]);
+                $centrePoint->setLatitude($responseArray['centre']['coordinates'][1]);
             
                 $postcodeObj->setCentrePoint($centrePoint);
             }
