@@ -1,5 +1,5 @@
 <?php
-namespace MinistryOfJustice\PostcodeInfo\Client;
+namespace MinistryOfJustice\PostcodeInfo;
 
 class LocalAuthority
 {
