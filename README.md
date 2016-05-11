@@ -7,7 +7,7 @@ PHP API Client wrapper for [MoJ Postcode Info API](https://github.com/ministryof
 Update your composer.json file to include:
 
     "require": {
-        "ministryofjustice/postcodeinfo-client-php": "*"
+        "ministryofjustice/postcodeinfo-client-php": "^3.0"
     },
     
 Then install the composer dependencies.
@@ -42,7 +42,7 @@ Quick Start
 
 	$client = new Client(
 		'API_KEY_HERE',
-		'https://postcodeinfo-staging.dsd.io'
+		'https://postcodeinfo.service.justice.gov.uk'
 	);
 	
 	$postcode = $client->lookupPostcode('AB124YA');
