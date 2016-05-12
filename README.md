@@ -1,6 +1,6 @@
-# postcodeinfo-client-php
+# MoJ DS PostcodeInfo - postcodeinfo-client-php
 
-PHP API Client wrapper for [MoJ Postcode Info API](https://github.com/ministryofjustice/postcodeinfo)
+PHP API Client for the [MoJ DS PostcodeInfo](https://github.com/ministryofjustice/postcodeinfo) service.
 
 
 #### PSR-7 HTTP
@@ -8,6 +8,8 @@ PHP API Client wrapper for [MoJ Postcode Info API](https://github.com/ministryof
 The Postcode Lookup PHP Client is based on a PSR-7 HTTP model. You therefore need to pick your preferred HTTP Client library to use.
 
 We will show examples here using the Guzzle v6 Adapter.
+
+Setup instructions are also available for [Curl](docs/curl-client-setup.md) and [Guzzle v5](docs/guzzle5-client-setup.md).
 
 
 ## Installing
@@ -50,9 +52,7 @@ $client = new \MinistryOfJustice\PostcodeInfo\Client([
 You are then able to access the Postcode Lookup API using ``$client``.
 
 
-# Usage
-
-## Return a list of addresses for a postcode
+### Return a list of addresses for a postcode
 
 ```php
 // Return a list of addresses
@@ -89,9 +89,8 @@ foreach ($addresses as $address) {
 	}
 ```
 
-Please see the tests in spec/ClientSpec.php to see all the interface methods and their usage.
 
-## Return metadata about a postcode
+### Return metadata about a postcode
 ```php
 $metadata = $client->lookupPostcodeMetadata('AB12 4YA');
 
@@ -108,7 +107,7 @@ $metadata->centre->getLongitude();
 ```
 
 
-# Tests
+## Tests
 
 To run the tests, add a file called spec/api_key. Inside this file place the API token for the postcode info service.
 
