@@ -52,44 +52,61 @@ You are then able to access the Postcode Lookup API using ``$client``.
 
 # Usage
 
+## Return a list of addresses for a postcode
+
 ```php
-$postcode = $client->lookupPostcode('AB124YA');
+// Return a list of addresses
+$addresses = $client->lookupPostcodeAddresses('SW19 5AL');
 
-$isValid = $postcode->isValid();
+// Check if any addresses were found
+$found = !empty($addresses);
 
-$centrePoint = $postcode->getCentrePoint();
-$centrePoint->getLatitude();
-$centrePoint->getLongitude();
+// Count the addresses found
+$numberFound = count($addresses);
 
-$localAuth = $postcode->getLocalAuthority();
-$localAuth->getName();
-$localAuth->getGssCode();
-
-$addresses = $postcode->getAddresses();
-
+// Iterate over the returned addresses
 foreach ($addresses as $address) {
-        $address->getUprn();
-        $address->getThoroughfareName();
-        $address->getOrganisationName();
-        $address->getDepartmentName();
-        $address->getPoBoxNumber();
-        $address->getBuildingName();
-        $address->getSubBuildingName();
-        $address->getBuildingNumber();
-        $address->getDependentLocality();
-        $address->getDoubleDependentLocality();
-        $address->getPostTown();
-        $address->getPostcode();
-        $address->getPostcodeType();
-        $address->getFormattedAddress();
 
-        $point = $address->getPoint();
-        $point->getLatitude();
-        $point->getLongitude();
+		// Available properties include...
+        $address->uprn;
+        $address->organisation_name;
+        $address->building_name;
+        $address->sub_building_name;
+        $address->building_number;
+        $address->post_town;
+        $address->postcode;
+        $address->postcode_type;
+        $address->formatted_address;
+        $address->thoroughfare_name;
+        $address->dependent_locality;
+        $address->double_dependent_locality;
+        $address->po_box_number;
+
+        // Coordinate info is under...
+		$address->point->getLatitude();
+        $address->point->getLongitude();
+
 	}
 ```
 
 Please see the tests in spec/ClientSpec.php to see all the interface methods and their usage.
+
+## Return metadata about a postcode
+```php
+$metadata = $client->lookupPostcodeMetadata('AB12 4YA');
+
+// You then have access to the following properties...
+$metadata->country->name;
+$metadata->country->gss_code;
+
+$metadata->local_authority->name;
+$metadata->local_authority->gss_code;
+
+$metadata->centre->getLatitude();
+$metadata->centre->getLongitude();
+
+```
+
 
 # Tests
 
