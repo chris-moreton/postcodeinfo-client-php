@@ -51,6 +51,11 @@ $client = new \MinistryOfJustice\PostcodeInfo\Client([
 
 You are then able to access the Postcode Lookup API using ``$client``.
 
+If you need to access an environment other than production, you can pass the base URL in via the `baseUrl` key in the constructor:
+
+```php
+'baseUrl' => '{api base url}'
+```
 
 ### Return a list of addresses for a postcode
 
