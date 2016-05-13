@@ -42,13 +42,13 @@ class ClientSpec extends ObjectBehavior
     function it_will_get_the_postcode_centrepoint_latitude()
     {
         $this->beConstructedWith(file_get_contents('spec/api_key'), 'https://postcodeinfo.service.justice.gov.uk/');
-        $this->lookupPostcode('AB124YA')->getCentrePoint()->getLatitude()->shouldBeCoordinate(-2.148964422536167);
+        $this->lookupPostcode('AB124YA')->getCentrePoint()->getLatitude()->shouldBeCoordinate(57.06892522314932);
     }
     
     function it_will_get_the_postcode_centrepoint_longitude()
     {
         $this->beConstructedWith(file_get_contents('spec/api_key'), 'https://postcodeinfo.service.justice.gov.uk/');
-        $this->lookupPostcode('AB124YA')->getCentrePoint()->getLongitude()->shouldBeCoordinate(57.06892522314932);
+        $this->lookupPostcode('AB124YA')->getCentrePoint()->getLongitude()->shouldBeCoordinate(-2.148964422536167);
     }
     
     function it_will_get_the_local_authority_gss_code()
@@ -152,13 +152,13 @@ class ClientSpec extends ObjectBehavior
     function it_will_get_the_latitude()
     {
         $this->beConstructedWith(file_get_contents('spec/api_key'), 'https://postcodeinfo.service.justice.gov.uk/');
-        $this->lookupPostcode('AB124YA')->getAddresses()[0]->getPoint()->getLatitude()->shouldBeCoordinate(-2.150890950596414);
+        $this->lookupPostcode('AB124YA')->getAddresses()[0]->getPoint()->getLatitude()->shouldBeCoordinate(57.06970637985032);
     }
 
     function it_will_get_the_longitude()
     {
         $this->beConstructedWith(file_get_contents('spec/api_key'), 'https://postcodeinfo.service.justice.gov.uk/');
-        $this->lookupPostcode('AB124YA')->getAddresses()[0]->getPoint()->getLongitude()->shouldBeCoordinate(57.06970637985032);
+        $this->lookupPostcode('AB124YA')->getAddresses()[0]->getPoint()->getLongitude()->shouldBeCoordinate(-2.150890950596414);
     }
     
     public function getMatchers()
