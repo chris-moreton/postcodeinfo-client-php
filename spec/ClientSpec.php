@@ -146,7 +146,7 @@ class ClientSpec extends ObjectBehavior
     function it_will_get_the_formatted_address()
     {
         $this->lookupPostcodeAddresses('AB124YA')->offsetGet(1)->formatted_address->shouldBe(
-            "Downhole Engineering\nBadentoy Road\nBadentoy Industrial Estate\nPortlethen\nAberdeen\nAB12 4YA"
+            "Target Well Control Ltd\nBadentoy Road\nBadentoy Industrial Estate\nPortlethen\nAberdeen\nAB12 4YA"
         );
     }
     
